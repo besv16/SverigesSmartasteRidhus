@@ -1,0 +1,17 @@
+.calendarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 36px;
+}
+
+.calendarContainer p {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.dateTimeContainer {
+	height: 36px;
+  width: 148px;
+  background-color: #F4F4F4;
+}

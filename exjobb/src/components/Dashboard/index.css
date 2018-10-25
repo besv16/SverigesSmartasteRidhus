@@ -1,0 +1,46 @@
+.dashboardContainerFull {
+  width: 95%;
+  height: 901px;
+  display: flex;
+}
+
+.dashboardContainer {
+  width: 100%;
+  background-color: #F4F4F4;
+  display: grid;
+  columns: 12;
+  grid-template-columns: 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6%;
+  grid-template-rows: 80px 42px;
+  grid-column-gap: 1.2%;
+}
+
+.dashboard {
+  width: 1360px;
+  background-color: maroon;
+}
+
+h6.heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.headerContainer {
+  height: 120px;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: span col4-start;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
+.header {
+  height: 120px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.heading {
+  width: 208px;
+  height: 22px;
+}
