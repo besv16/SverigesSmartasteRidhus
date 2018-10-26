@@ -2,20 +2,23 @@
   width: 95%;
   height: 901px;
   display: flex;
+  /* flex-direction: row;
+  justify-content: center; */
+  background-color: deeppink;
 }
 
 .dashboardContainer {
-  width: 100%;
-  background-color: #F4F4F4;
+  width: 95%;
+  background-color: aquamarine;
   display: grid;
-  columns: 12;
-  grid-template-columns: 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6%;
+  grid-template-columns: repeat(12, 6%);
   grid-template-rows: 80px 42px;
-  grid-column-gap: 1.2%;
+  grid-column-gap: 2.555%;
+  /* overflow: hidden; */
 }
 
 .dashboard {
-  width: 1360px;
+  width: 160px;
   background-color: maroon;
 }
 
