@@ -8,11 +8,12 @@
 }
 
 .dashboardContainer {
-  width: 95%;
+  width: 100%;
   background-color: aquamarine;
   display: grid;
-  grid-template-columns: repeat(12, 6%);
-  grid-template-rows: 80px 42px;
+  /* grid-template-columns: repeat(11, 6%); */
+  grid-template-columns: 0.4% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 0%;
+  grid-template-rows: 120px 240px;
   grid-column-gap: 2.555%;
   /* overflow: hidden; */
 }
@@ -20,6 +21,10 @@
 .dashboard {
   width: 160px;
   background-color: maroon;
+  grid-column-start: 1;
+  grid-column-end: span col4-start;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 h6.heading {
@@ -29,12 +34,37 @@ h6.heading {
 }
 
 .headerContainer {
+  width: 90.75%;
   height: 120px;
   display: flex;
   grid-column-start: 1;
   grid-column-end: span col4-start;
   grid-row-start: 1;
   grid-row-end: span 2;
+}
+
+.card1 {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  background-color: pink;
+}
+
+.card2 {
+  grid-column-start: 6;
+  grid-column-end: 10;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  background-color: blue;
+}
+
+.card3 {
+  grid-column-start: 10;
+  grid-column-end: 14;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  background-color: red;
 }
 
 .header {
