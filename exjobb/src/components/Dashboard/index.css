@@ -2,20 +2,15 @@
   width: 95%;
   height: 901px;
   display: flex;
-  /* flex-direction: row;
-  justify-content: center; */
-  background-color: deeppink;
 }
 
 .dashboardContainer {
   width: 100%;
-  background-color: aquamarine;
+  background-color: #E9E9E9;
   display: grid;
-  /* grid-template-columns: repeat(11, 6%); */
   grid-template-columns: 0.4% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 0%;
-  grid-template-rows: 120px 240px;
-  grid-column-gap: 2.555%;
-  /* overflow: hidden; */
+  grid-template-rows: 120px 22px 287px 287px;
+  grid-gap: 2.7% 2.555%;
 }
 
 .dashboard {
@@ -27,47 +22,35 @@
   grid-row-end: 3;
 }
 
-h6.heading {
+h5.heading {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
 }
 
+.headerBackground {
+  width: 103.06%;
+  height: 120px;
+  grid-column-start: 1;
+  grid-column-end: 14;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  background-color: #fff;
+}
+
 .headerContainer {
-  width: 90.75%;
   height: 120px;
   display: flex;
-  grid-column-start: 1;
-  grid-column-end: span col4-start;
+  grid-column-start: 2;
+  grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: span 2;
 }
 
-.card1 {
-  grid-column-start: 2;
-  grid-column-end: 6;
-  grid-row-start: 3;
-  grid-row-end: 5;
-  background-color: pink;
-}
-
-.card2 {
-  grid-column-start: 6;
-  grid-column-end: 10;
-  grid-row-start: 3;
-  grid-row-end: 5;
-  background-color: blue;
-}
-
-.card3 {
-  grid-column-start: 10;
-  grid-column-end: 14;
-  grid-row-start: 3;
-  grid-row-end: 5;
-  background-color: red;
-}
-
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 120px;
   width: 100%;
   background-color: #fff;
@@ -75,5 +58,21 @@ h6.heading {
 
 .heading {
   width: 208px;
-  height: 22px;
+}
+
+.dashboardHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.dashboardHeading h5 {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 22px;
+  color: #0D254D;
 }
