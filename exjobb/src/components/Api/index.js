@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import Calendar from '../Calendar'
-import Card from '../Card'
 // import './index.css'
 
 class Api extends Component {
