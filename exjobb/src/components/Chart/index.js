@@ -7,10 +7,6 @@ class Chart extends Component {
     chartData: this.props.chartData
   }
 
-  static defaultProps = {
-    displayGridlines: false,
-  }
-
   render() {
     return (
       <div className="chart">
