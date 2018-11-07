@@ -19,13 +19,13 @@ class App extends Component {
         renderContent: 'Dashboard',
         socket: null,
         isLoading: '',
-        sensors: []
     }
 
     renderContent(e) {
         this.setState({
             renderContent: e
         })
+        console.log(this.state.renderContent);
     }
 
     componentWillMount() {
@@ -35,24 +35,6 @@ class App extends Component {
     componentDidMount = () => {
         const API_KEY = process.env.REACT_APP_EXJOBB_API_KEY;
         const apiUrl = 'http://159.65.94.112/api/v1/sensors';
-
-        // fetch(apiUrl, {
-        //     method: 'GET',
-        //     withCredentials: true,
-            // credentials: 'include',
-            // headers: {
-            //   'Authorization': auth,
-            // }
-        // })
-        //     .then(data => data.json())
-        //     .then((json) => {
-        //         this.setState({
-        //             sensors: json,
-        //         })
-        //     })
-        //     .catch(error => this.setState({
-        //         message: 'Something bad happened ' + error
-        //     }));
     }
 
     // initSocket = () => {

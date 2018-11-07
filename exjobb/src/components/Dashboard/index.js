@@ -20,7 +20,7 @@ class Dashboard extends Component {
           <Card type="smallCard" title="Damm" colStart="10" colEnd="14" endPoint="temperature" />
           <Card type="bigCard" title="Positionering" colStart="2" colEnd="8" endPoint="temperature" />
           <Card type="bigCard" title="Antal ryttare idag" colStart="8" colEnd="14" endPoint="temperature" />
-        </div>
+      </div>
     )
   }
 }

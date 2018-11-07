@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import Chart from '../Chart'
 import './index.css'
 
 class Card extends Component {
 
   state = {
-    data: [],
+    htmlData: [],
+    pureData: [],
+    chartData: {}
   }
 
   componentDidMount = () => {
@@ -14,6 +17,11 @@ class Card extends Component {
       .then(results => {
         return results.json();
       }).then((data) => {
+
+        const dataValue = data.map((temp) => {
+          return temp.value;
+        })
+
         let temperatures = data.map((temperature) => {
           return (
             <div key={temperature.results}>
@@ -21,31 +29,35 @@ class Card extends Component {
             </div>
           )
         })
+
         this.setState({
-          data: temperatures,
+          htmlData: temperatures,
+          pureData: dataValue,
+        })
+        this.setState({
+          chartData: {
+            labels: this.state.pureData,
+            datasets: [
+              {
+                label: 'Temperature',
+                data: this.state.pureData
+              }
+            ]
+          }
         })
       })
-
-    // fetch(apiUrl)
-    //   .then(data => data.json())
-    //   .then((json) => {
-    //     this.setState({
-    //       data: json,
-    //     })
-    //   })
-
-
   }
 
   render() {
     return (
-    <div className={this.props.type} style={{ gridColumnStart: this.props.colStart, gridColumnEnd: this.props.colEnd, gridRowStart: this.props.rowStart, gridRowEnd: this.props.rowEnd }}>
-    <div className="headline">
-    <p>{this.props.title}</p>
-    <div className="open"></div>
-    </div>
-    {this.state.data}
-    </div>
+      <div className={this.props.type} style={{ gridColumnStart: this.props.colStart, gridColumnEnd: this.props.colEnd, gridRowStart: this.props.rowStart, gridRowEnd: this.props.rowEnd }}>
+        <div className="headline">
+          <p>{this.props.title}</p>
+        <div className="open"></div>
+        </div>
+        {this.state.pureData}
+        <Chart chartData={this.state.chartData} />
+      </div>
   )}
 
 }
