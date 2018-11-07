@@ -55,7 +55,6 @@ class Card extends Component {
           <p>{this.props.title}</p>
         <div className="open"></div>
         </div>
-        {this.state.pureData}
         <Chart chartData={this.state.chartData} />
       </div>
   )}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Bar} from 'react-chartjs-2'
+import {Line} from 'react-chartjs-2'
 
 class Chart extends Component {
 
@@ -7,13 +7,31 @@ class Chart extends Component {
     chartData: this.props.chartData
   }
 
+  static defaultProps = {
+    displayGridlines: false,
+  }
+
   render() {
     return (
       <div className="chart">
-        <Bar
+        <Line
           data={this.props.chartData}
           width={200}
           height={100}
+          options={{
+            scales: {
+              xAxes: [{
+                  gridLines: {
+                      drawOnChartArea: false
+                  }
+              }],
+              yAxes: [{
+                  gridLines: {
+                      drawOnChartArea: false
+                  }
+              }]
+            }
+          }}
           />
       </div>
     )
