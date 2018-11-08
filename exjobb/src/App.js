@@ -11,7 +11,6 @@ import apiIconInactive from './icons/api_inactive.svg'
 import contactIconActive from './icons/contact_active.svg'
 import contactIconInactive from './icons/contact_inactive.svg'
 
-const socketURL = 'https://159.65.94.112/api/v1/sensors';
 
 class App extends Component {
 
@@ -33,19 +32,20 @@ class App extends Component {
     }
 
     componentDidMount = () => {
-        const API_KEY = process.env.REACT_APP_EXJOBB_API_KEY;
-        const apiUrl = 'http://159.65.94.112/api/v1/sensors';
+        //const API_KEY = process.env.REACT_APP_EXJOBB_API_KEY;
+        //const apiUrl = 'http://159.65.94.112/api/v1/sensors';
     }
 
-    // initSocket = () => {
-    //   const socket = io(socketURL)
-    //   console.log(socket)
-    //   console.log(this.state)
-    //   socket.on('connect', () => {
-    //     console.log("Connected!")
-    //   })
-    //   this.setState({socket})
-    // }
+    initSocket = () => {
+        const socket = io('ws://159.65.94.112/ws/rise_acreo_sensor_1');
+
+        socket.on('connect', () => {
+            console.log(socket.connected);
+            console.log("Hej hej"); // true
+        });
+    }
+
+
 
     render() {
         return (
@@ -54,19 +54,19 @@ class App extends Component {
                     <div className="menuItems">
                         <div className={"menuItem " + (this.state.renderContent === 'Dashboard' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Dashboard')}>
                             <div className="iconContainer">
-                              <img src={(this.state.renderContent === 'Dashboard' ? dashboardIconActive : dashboardIconInactive)}></img>
+                                <img src={(this.state.renderContent === 'Dashboard' ? dashboardIconActive : dashboardIconInactive)}></img>
                             </div>
                             <p>Dashboard</p>
                         </div>
                         <div className={"menuItem " + (this.state.renderContent === 'Api' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Api')}>
                             <div className="iconContainer">
-                              <img src={(this.state.renderContent === 'Api' ? apiIconActive : apiIconInactive)}></img>
+                                <img src={(this.state.renderContent === 'Api' ? apiIconActive : apiIconInactive)}></img>
                             </div>
                             <p>API info</p>
                         </div>
                         <div className={"menuItem " + (this.state.renderContent === 'Kontakt' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Kontakt')}>
                             <div className="iconContainer">
-                              <img src={(this.state.renderContent === 'Kontakt' ? contactIconActive : contactIconInactive)}></img>
+                                <img src={(this.state.renderContent === 'Kontakt' ? contactIconActive : contactIconInactive)}></img>
                             </div>
                             <p>Kontakt</p>
                         </div>
