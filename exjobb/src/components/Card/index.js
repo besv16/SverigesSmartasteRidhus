@@ -30,15 +30,12 @@ class Card extends Component {
         })
 
         this.setState({
-
           htmlData: temperatures,
-
           chartData: {
             labels: dataValue,
             datasets: [
               {
                 label: 'Temperature',
-                // Beroende av pureData som sätta häröver
                 data: dataValue
               }
             ]

@@ -27,24 +27,16 @@ class App extends Component {
     }
 
     componentWillMount() {
-      //this.initSocket()
-    }
-
-    componentDidMount = () => {
-        //const API_KEY = process.env.REACT_APP_EXJOBB_API_KEY;
-        //const apiUrl = 'http://159.65.94.112/api/v1/sensors';
+      this.initSocket()
     }
 
     initSocket = () => {
         const socket = io('ws://159.65.94.112/ws/rise_acreo_sensor_1');
 
         socket.on('connected', () => {
-            console.log(socket.connected); // true/false
-            console.log("Hej hej");
+            console.log("Nu är vi uppkopplade!");
         });
     }
-
-
 
     render() {
         return (
