@@ -24,11 +24,10 @@ class App extends Component {
         this.setState({
             renderContent: e
         })
-        console.log(this.state.renderContent);
     }
 
     componentWillMount() {
-        //this.initSocket()
+      //this.initSocket()
     }
 
     componentDidMount = () => {
@@ -39,9 +38,9 @@ class App extends Component {
     initSocket = () => {
         const socket = io('ws://159.65.94.112/ws/rise_acreo_sensor_1');
 
-        socket.on('connect', () => {
-            console.log(socket.connected);
-            console.log("Hej hej"); // true
+        socket.on('connected', () => {
+            console.log(socket.connected); // true/false
+            console.log("Hej hej");
         });
     }
 
@@ -54,19 +53,19 @@ class App extends Component {
                     <div className="menuItems">
                         <div className={"menuItem " + (this.state.renderContent === 'Dashboard' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Dashboard')}>
                             <div className="iconContainer">
-                                <img src={(this.state.renderContent === 'Dashboard' ? dashboardIconActive : dashboardIconInactive)}></img>
+                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Dashboard' ? dashboardIconActive : dashboardIconInactive)}></img>
                             </div>
                             <p>Dashboard</p>
                         </div>
                         <div className={"menuItem " + (this.state.renderContent === 'Api' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Api')}>
                             <div className="iconContainer">
-                                <img src={(this.state.renderContent === 'Api' ? apiIconActive : apiIconInactive)}></img>
+                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Api' ? apiIconActive : apiIconInactive)}></img>
                             </div>
                             <p>API info</p>
                         </div>
                         <div className={"menuItem " + (this.state.renderContent === 'Kontakt' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Kontakt')}>
                             <div className="iconContainer">
-                                <img src={(this.state.renderContent === 'Kontakt' ? contactIconActive : contactIconInactive)}></img>
+                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Kontakt' ? contactIconActive : contactIconInactive)}></img>
                             </div>
                             <p>Kontakt</p>
                         </div>

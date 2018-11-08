@@ -6,7 +6,6 @@ class Card extends Component {
 
   state = {
     htmlData: [],
-    pureData: [],
     chartData: {}
   }
 
@@ -31,16 +30,16 @@ class Card extends Component {
         })
 
         this.setState({
+
           htmlData: temperatures,
-          pureData: dataValue,
-        })
-        this.setState({
+
           chartData: {
-            labels: this.state.pureData,
+            labels: dataValue,
             datasets: [
               {
                 label: 'Temperature',
-                data: this.state.pureData
+                // Beroende av pureData som sätta häröver
+                data: dataValue
               }
             ]
           }
