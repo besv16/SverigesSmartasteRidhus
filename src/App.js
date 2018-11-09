@@ -32,9 +32,8 @@ class App extends Component {
 
     initSocket = () => {
         const socket = io('ws://159.65.94.112/ws/rise_acreo_sensor_1');
-
-        socket.on('connected', () => {
-            console.log("Nu är vi uppkopplade!");
+        socket.on('connect', () => {
+            console.log("Nu är vi uppkopplade!!");
         });
     }
 
