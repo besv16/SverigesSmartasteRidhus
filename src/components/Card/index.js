@@ -10,38 +10,7 @@ class Card extends Component {
   }
 
   componentDidMount = () => {
-    const apiUrl = 'http://159.65.94.112/api/v1/batch/' + this.props.endPoint;
 
-    fetch(apiUrl)
-      .then(results => {
-        return results.json();
-      }).then((data) => {
-
-        const dataValue = data.map((temp) => {
-          return temp.value;
-        })
-
-        let temperatures = data.map((temperature) => {
-          return (
-            <div key={temperature.results}>
-              <p>{temperature.value}</p>
-            </div>
-          )
-        })
-
-        this.setState({
-          htmlData: temperatures,
-          chartData: {
-            labels: dataValue,
-            datasets: [
-              {
-                label: 'Temperature',
-                data: dataValue
-              }
-            ]
-          }
-        })
-      })
   }
 
   render() {
