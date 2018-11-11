@@ -6,11 +6,11 @@ class Card extends Component {
 
   state = {
     htmlData: [],
-    chartData: {}
+    chartData: {},
   }
 
-  componentDidMount = () => {
-
+  componentWillMount() {
+    //this.initSocket()
   }
 
   render() {
@@ -20,6 +20,7 @@ class Card extends Component {
           <p>{this.props.title}</p>
         <div className="open"></div>
         </div>
+        {this.state.socketData}
         <Chart chartData={this.state.chartData} />
       </div>
   )}

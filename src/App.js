@@ -17,7 +17,7 @@ class App extends Component {
     state = {
         renderContent: 'Dashboard',
         socket: null,
-        isLoading: '',
+        isLoading: ''
     }
 
     renderContent(e) {
@@ -25,7 +25,6 @@ class App extends Component {
             renderContent: e
         })
     }
-
 
     render() {
         return (
