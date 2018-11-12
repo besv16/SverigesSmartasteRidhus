@@ -41,7 +41,7 @@ class App extends Component {
                             <div className="iconContainer">
                                 <img alt={this.state.renderContent} src={(this.state.renderContent === 'Api' ? apiIconActive : apiIconInactive)}></img>
                             </div>
-                            <p>API info</p>
+                            <p>API</p>
                         </div>
                         <div className={"menuItem " + (this.state.renderContent === 'Kontakt' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Kontakt')}>
                             <div className="iconContainer">
