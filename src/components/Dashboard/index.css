@@ -1,78 +1,78 @@
 .dashboardContainerFull {
-  width: 95%;
-  height: 901px;
-  display: flex;
+    width: 95%;
+    height: 901px;
+    display: flex;
 }
 
 .dashboardContainer {
-  width: 100%;
-  background-color: #E9E9E9;
-  display: grid;
-  grid-template-columns: 0.4% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 0%;
-  grid-template-rows: 120px 22px 287px 287px;
-  grid-gap: 2.7% 2.555%;
+    width: 100%;
+    background-color: #E9E9E9;
+    display: grid;
+    grid-template-columns: 0.4% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 0%;
+    grid-template-rows: 120px 22px 287px 287px;
+    grid-gap: 2.7% 2.555%;
 }
 
 .dashboard {
-  width: 160px;
-  background-color: maroon;
-  grid-column-start: 1;
-  grid-column-end: span col4-start;
-  grid-row-start: 2;
-  grid-row-end: 3;
+    width: 160px;
+    background-color: maroon;
+    grid-column-start: 1;
+    grid-column-end: span col4-start;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 h5.heading {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 .headerBackground {
-  width: 103.06%;
-  height: 120px;
-  grid-column-start: 1;
-  grid-column-end: 14;
-  grid-row-start: 1;
-  grid-row-end: span 2;
-  background-color: #fff;
+    width: 103.06%;
+    height: 72px;
+    grid-column-start: 1;
+    grid-column-end: 14;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    background-color: #fff;
 }
 
 .headerContainer {
-  height: 120px;
-  display: flex;
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: span 2;
+    height: 120px;
+    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: span 2;
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 120px;
-  width: 100%;
-  background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 72px;
+    width: 100%;
+    background-color: #fff;
 }
 
 .heading {
-  width: 208px;
+    width: 208px;
 }
 
 .dashboardHeading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 .dashboardHeading h5 {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 22px;
-  color: #0D254D;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #0D254D;
 }
