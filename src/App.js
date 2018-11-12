@@ -1,22 +1,16 @@
 import React, { Component } from 'react'
-import io from 'socket.io-client'
 import Dashboard from './components/Dashboard'
 import Api from './components/Api'
-import Contact from './components/Contact'
 import './App.css'
 import dashboardIconActive from './icons/dashboard_active.svg'
 import dashboardIconInactive from './icons/dashboard_inactive.svg'
 import apiIconActive from './icons/api_active.svg'
 import apiIconInactive from './icons/api_inactive.svg'
-import contactIconActive from './icons/contact_active.svg'
-import contactIconInactive from './icons/contact_inactive.svg'
-
 
 class App extends Component {
 
     state = {
         renderContent: 'Dashboard',
-        socket: null,
         isLoading: ''
     }
 
@@ -43,18 +37,11 @@ class App extends Component {
                             </div>
                             <p>API info</p>
                         </div>
-                        <div className={"menuItem " + (this.state.renderContent === 'Kontakt' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Kontakt')}>
-                            <div className="iconContainer">
-                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Kontakt' ? contactIconActive : contactIconInactive)}></img>
-                            </div>
-                            <p>Kontakt</p>
-                        </div>
                     </div>
                 </div>
                 <div className="dashboardContainerFull">
                     {this.state.renderContent === 'Dashboard' && (<Dashboard />)}
                     {this.state.renderContent === 'Api' && (<Api />)}
-                    {this.state.renderContent === 'Kontakt' && (<Contact />)}
                 </div>
             </div>
         );
