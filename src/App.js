@@ -35,7 +35,7 @@ class App extends Component {
                             <div className="iconContainer">
                                 <img alt={this.state.renderContent} src={(this.state.renderContent === 'Api' ? apiIconActive : apiIconInactive)}></img>
                             </div>
-                            <p>API info</p>
+                            <p>API</p>
                         </div>
                     </div>
                 </div>
