@@ -50,6 +50,13 @@
     background-color: #fff;
 }
 
+.heading {
+  height: 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .headerLogo {
     max-height: 29px;
     max-width: 159px;
