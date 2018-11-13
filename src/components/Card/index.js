@@ -15,7 +15,7 @@ class Card extends Component {
           <p>{this.props.title}</p>
         <div className="open"></div>
         </div>
-        <Chart endPoint="temperature"/>
+        <Chart endPoint={this.props.endPoint}/>
       </div>
   )}
 
