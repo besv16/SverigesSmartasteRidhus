@@ -22,12 +22,6 @@
     grid-row-end: 3;
 }
 
-h5.heading {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-}
-
 .headerBackground {
     width: 103.06%;
     height: 72px;
@@ -56,8 +50,9 @@ h5.heading {
     background-color: #fff;
 }
 
-.heading {
-    width: 208px;
+.headerLogo {
+    max-height: 29px;
+    max-width: 159px;
 }
 
 .dashboardHeading {

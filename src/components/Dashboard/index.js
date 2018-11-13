@@ -10,7 +10,7 @@ class Dashboard extends Component {
         <div className="headerContainer">
           <div className="header">
             <div className="heading">
-              <h5 className="heading">Ridsportens innovationer</h5>
+              <img className="headerLogo" src="/icons/innovare_logo.png" alt="Innovare logotyp" />
             </div>
           </div>
         </div>
