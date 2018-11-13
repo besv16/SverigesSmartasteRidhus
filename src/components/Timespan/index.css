@@ -8,21 +8,21 @@
 }
 
 .chooseToday {
-  width: 55px;
+  width: 53px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .choosePeriod {
-  width: 55px;
+  width: 104px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .second {
-  width: 195px;
+  width: 181px;
   height: 35px;
   display: flex;
   flex-direction: row;
