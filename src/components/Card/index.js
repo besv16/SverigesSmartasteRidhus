@@ -9,15 +9,19 @@ class Card extends Component {
   }
 
   render() {
+
     return (
       <div className={this.props.type} style={{ gridColumnStart: this.props.colStart, gridColumnEnd: this.props.colEnd, gridRowStart: this.props.rowStart, gridRowEnd: this.props.rowEnd }}>
         <div className="headline">
           <p>{this.props.title}</p>
-        <div className="open"></div>
+          <div className="open">
+            <img src="/icons/fullscreen_icon.svg" alt="full screen icon" />
+          </div>
         </div>
-        <Chart endPoint="temperature"/>
+        <Chart endPoint="temperature" />
       </div>
-  )}
+    )
+  }
 
 }
 

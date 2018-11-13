@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/navigation/fullscreen_24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5.8,15 C5.36,15 5,15.36 5,15.8 L5,18.2 C5,18.64 5.36,19 5.8,19 L8.2,19 C8.64,19 9,18.64 9,18.2 C9,17.76 8.64,17.4 8.2,17.4 L6.6,17.4 L6.6,15.8 C6.6,15.36 6.24,15 5.8,15 Z M5.8,9 C6.24,9 6.6,8.64 6.6,8.2 L6.6,6.6 L8.2,6.6 C8.64,6.6 9,6.24 9,5.8 C9,5.36 8.64,5 8.2,5 L5.8,5 C5.36,5 5,5.36 5,5.8 L5,8.2 C5,8.64 5.36,9 5.8,9 Z M17.4,17.4 L15.8,17.4 C15.36,17.4 15,17.76 15,18.2 C15,18.64 15.36,19 15.8,19 L18.2,19 C18.64,19 19,18.64 19,18.2 L19,15.8 C19,15.36 18.64,15 18.2,15 C17.76,15 17.4,15.36 17.4,15.8 L17.4,17.4 Z M15,5.8 C15,6.24 15.36,6.6 15.8,6.6 L17.4,6.6 L17.4,8.2 C17.4,8.64 17.76,9 18.2,9 C18.64,9 19,8.64 19,8.2 L19,5.8 C19,5.36 18.64,5 18.2,5 L15.8,5 C15.36,5 15,5.36 15,5.8 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Card/Card-Copy" transform="translate(-349.000000, -24.000000)">
+            <g id="icon/navigation/fullscreen_24px" transform="translate(344.000000, 19.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g fill-rule="nonzero"></g>
+                <g id="✱-/-Color-/-Icons-/-Blue-/-Dark" mask="url(#mask-2)" fill="#0D254D" fill-rule="evenodd">
+                    <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
