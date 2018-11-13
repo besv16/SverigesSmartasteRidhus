@@ -2,27 +2,28 @@ import React, { Component } from 'react'
 import Chart from '../Chart'
 import './index.css'
 
-class Card extends Component {
+class Timespan extends Component {
 
   componentWillMount() {
-    //this.initSocket()
+
   }
 
   render() {
 
     return (
-      <div className={this.props.type} style={{ gridColumnStart: this.props.colStart, gridColumnEnd: this.props.colEnd, gridRowStart: this.props.rowStart, gridRowEnd: this.props.rowEnd }}>
-        <div className="headline">
-          <p>{this.props.title}</p>
-          <div className="open">
-            <img src="/icons/fullscreen_icon.svg" alt="ikon för fullskärm" />
+      <div className="first">
+        <div className="second">
+          <div className="chooseToday">
+            <div className="radio"></div><span><p>Idag</p></span>
+          </div>
+          <div className="choosePeriod">
+            <div className="radio"></div><span><p>Välj period</p></span>
           </div>
         </div>
-        <Chart endPoint={this.props.endPoint} />
       </div>
     )
   }
 
 }
 
-export default Card
+export default Timespan

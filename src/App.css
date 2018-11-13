@@ -1,6 +1,7 @@
 * {
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .app {
@@ -23,6 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-weight: normal;
     align-items: center;
     font-size: 8px;
     letter-spacing: 1.5px;
@@ -31,12 +33,10 @@
 }
 
 .inactive {
-    font-weight: normal;
     color: #F4F4F4;
 }
 
 .active {
-    font-weight: bold;
     color: #BEDCFF;
     background-color: rgba(255, 255, 255, 0.2);
 }

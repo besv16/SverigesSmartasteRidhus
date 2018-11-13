@@ -6,11 +6,11 @@
 
 .dashboardContainer {
     width: 100%;
-    background-color: #E9E9E9;
+    background-color: #f2f7fb;
     display: grid;
     grid-template-columns: 0.4% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 0%;
-    grid-template-rows: 120px 22px 287px 287px;
-    grid-gap: 2.7% 2.555%;
+    grid-template-rows: 72px 72px 50px 287px 287px;
+    grid-gap: 0px 2.555%;
 }
 
 .dashboard {
@@ -24,21 +24,19 @@
 
 .headerBackground {
     width: 103.06%;
-    height: 72px;
     grid-column-start: 1;
     grid-column-end: 14;
     grid-row-start: 1;
-    grid-row-end: span 2;
+    grid-row-end: 2;
     background-color: #fff;
 }
 
 .headerContainer {
-    height: 120px;
     display: flex;
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 14;
     grid-row-start: 1;
-    grid-row-end: span 2;
+    grid-row-end: 2;
 }
 
 .header {
@@ -68,8 +66,8 @@
     justify-content: center;
     grid-column-start: 2;
     grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
 .dashboardHeading h5 {
@@ -78,5 +76,5 @@
     letter-spacing: 1px;
     line-height: 17px;
     width: 185px;
-    font-weight: 300;
+    font-weight: normal;
 }

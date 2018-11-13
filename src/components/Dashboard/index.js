@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Card from '../Card'
+import Timespan from '../Timespan'
 import './index.css'
 
 class Dashboard extends Component {
@@ -14,6 +15,7 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
+        <Timespan />
         <div className="dashboardHeading" colStart="2" colEnd="4" ><h5>Dashboard - Översikt</h5></div>
         <Card type="smallCard" title="Temperatur" colStart="2" colEnd="6" endPoint="temperature" />
         <Card type="smallCard" title="Luftfuktighet" colStart="6" colEnd="10" />

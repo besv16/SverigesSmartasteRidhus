@@ -1,13 +1,15 @@
 .smallCard {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    background-color: #fff;
-}
-
-.bigCard {
     grid-row-start: 4;
     grid-row-end: 5;
     background-color: #fff;
+    border-radius: 4px;
+}
+
+.bigCard {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 .headline {
@@ -17,7 +19,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #F4F4F4;
 }
 
 .headline p {
