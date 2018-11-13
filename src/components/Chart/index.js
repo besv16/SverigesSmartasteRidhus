@@ -24,7 +24,7 @@ class Chart extends Component {
           return temp.value;
         })
         this.setState({
-          pureData: dataValues.slice(0, 8)
+          pureData: dataValues.slice(0, 5)
         })
       });
     }
