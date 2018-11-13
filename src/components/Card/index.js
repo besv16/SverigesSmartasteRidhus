@@ -15,10 +15,10 @@ class Card extends Component {
         <div className="headline">
           <p>{this.props.title}</p>
           <div className="open">
-            <img src="/icons/fullscreen_icon.svg" alt="full screen icon" />
+            <img src="/icons/fullscreen_icon.svg" alt="ikon för fullskärm" />
           </div>
         </div>
-        <Chart endPoint={this.props.endPoint}/>
+        <Chart endPoint={this.props.endPoint} />
       </div>
     )
   }
