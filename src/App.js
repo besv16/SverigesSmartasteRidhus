@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import Dashboard from './components/Dashboard'
 import Api from './components/Api'
 import './App.css'
-import dashboardIconActive from './icons/dashboard_active.svg'
-import dashboardIconInactive from './icons/dashboard_inactive.svg'
-import apiIconActive from './icons/api_active.svg'
-import apiIconInactive from './icons/api_inactive.svg'
 
 class App extends Component {
 
@@ -27,13 +23,13 @@ class App extends Component {
                     <div className="menuItems">
                         <div className={"menuItem " + (this.state.renderContent === 'Dashboard' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Dashboard')}>
                             <div className="iconContainer">
-                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Dashboard' ? dashboardIconActive : dashboardIconInactive)}></img>
+                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Dashboard' ? '/icons/dashboard_active.svg' : './icons/dashboard_inactive.svg')}></img>
                             </div>
                             <p>Dashboard</p>
                         </div>
                         <div className={"menuItem " + (this.state.renderContent === 'Api' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Api')}>
                             <div className="iconContainer">
-                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Api' ? apiIconActive : apiIconInactive)}></img>
+                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Api' ? '/icons/api_active.svg' : './icons/api_inactive.svg')}></img>
                             </div>
                             <p>API</p>
                         </div>
