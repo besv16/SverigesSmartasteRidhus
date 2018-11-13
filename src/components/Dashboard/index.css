@@ -66,8 +66,10 @@
 }
 
 .dashboardHeading h5 {
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 22px;
     color: #0D254D;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 17px;
+    width: 185px;
+    font-weight: 300;
 }

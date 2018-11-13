@@ -14,7 +14,7 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
-        <div className="dashboardHeading"><h5>Dashboard</h5></div>
+        <div className="dashboardHeading" colStart="2" colEnd="4" ><h5>Dashboard - Översikt</h5></div>
         <Card type="smallCard" title="Temperatur" colStart="2" colEnd="6" endPoint="temperature" />
         <Card type="smallCard" title="Luftfuktighet" colStart="6" colEnd="10" />
         <Card type="smallCard" title="Damm" colStart="10" colEnd="14" />
