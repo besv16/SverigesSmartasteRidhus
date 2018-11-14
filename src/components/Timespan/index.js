@@ -25,6 +25,7 @@ class Timespan extends Component {
           </div>
         </div>
         <Flatpickr data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
+        <Flatpickr data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
       </div>
     )
   }
