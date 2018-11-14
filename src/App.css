@@ -30,10 +30,14 @@
     letter-spacing: 1.5px;
     width: 100%;
     height: 72px;
+}
+
+.inactive {
     color: #F4F4F4;
 }
 
 .active {
+    color: #BEDCFF;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
