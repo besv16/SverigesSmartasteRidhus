@@ -15,17 +15,26 @@ class Timespan extends Component {
     const { date } = this.state;
 
     return (
-      <div className="first">
-        <div className="second">
-          <div className="chooseToday">
-            <div className="radio"></div><span><p>Idag</p></span>
+      <div className="timelineContainer">
+        <div className="timeline">
+          <div className="chooseTime">
+            <div className="option">
+              <p>Idag</p>
+            </div>
+            <div className="option">
+              <p>Välj period</p>
+            </div>
           </div>
-          <div className="choosePeriod">
-            <div className="radio"></div><span><p>Välj period</p></span>
+          <div className="calendarContainer">
+            <Flatpickr className="flatpickr" data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
+            <Flatpickr className="flatpickr" data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
+          </div>
+          <div className="updateContainer">
+            <div className="update">
+              <p>Uppdatera</p>
+            </div>
           </div>
         </div>
-        <Flatpickr data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
-        <Flatpickr data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
       </div>
     )
   }

@@ -1,50 +1,49 @@
 * {
-    font-family: 'Lato', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .app {
-    width: 100%;
-    height: 901px;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .menu {
-    width: 80px;
-    background-color: #0D254D;
+  width: 80px;
+  background-color: #0D254D;
 }
 
 .menuItems {
-    margin-top: 72px;
+  margin-top: 72px;
 }
 
 .menuItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-weight: normal;
-    align-items: center;
-    font-size: 8px;
-    letter-spacing: 1.5px;
-    width: 100%;
-    height: 72px;
-    color: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: normal;
+  align-items: center;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  width: 100%;
+  height: 72px;
+  color: #F4F4F4;
 }
 
 .active {
-    background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .iconContainer {
-    flex-direction: column;
-    justify-content: flex-end;
-    display: flex;
-    height: 28px;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+  height: 28px;
 }
 
 .icon {
-    width: 19px;
-    height: 18px;
+  width: 19px;
+  height: 18px;
 }

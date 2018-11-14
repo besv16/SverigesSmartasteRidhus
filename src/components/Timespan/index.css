@@ -1,48 +1,71 @@
-.first {
+.timelineContainer {
     display: flex;
     align-items: center;
     grid-column-start: 2;
     grid-column-end: 14;
     grid-row-start: 2;
     grid-row-end: 3;
+    border-radius: 4px;
+    background-color: #ffffff;
 }
 
-.chooseToday {
-    width: 53px;
+.timeline {
+  width: 780px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.option {
+    width: 50%;
+    height: 35px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-.choosePeriod {
-    width: 104px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.option:nth-child(1) {
+    color: #ffffff;
+    background-color: #4C84FF;
 }
 
-.second {
-    width: 181px;
+.chooseTime {
+    width: 190px;
     height: 35px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    border: 1px solid #4C84FF;
+    border-radius: 4px;
 }
 
-.second p {
-    font-size: 12px;
+.timeline p {
+    font-size: 10px;
     font-weight: bold;
-    color: #153C6C;
     line-height: 15px;
     margin: 0;
 }
 
-.radio {
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border-radius: 5px;
+.calendarContainer {
+  height: 35px;
+  display: flex;
+  flex-direction: row;
 }
 
-.flatpickr {}
+.calendarContainer input {
+  display: flex;
+  border-radius: 4px;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid #E3E8EF;
+  text-align: center;
+}
+
+.flatpickr {
+  width: 214px;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+.calendarContainer input p {
+}

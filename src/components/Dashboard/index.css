@@ -1,6 +1,5 @@
 .dashboardContainerFull {
     width: 95%;
-    height: 901px;
     display: flex;
 }
 
@@ -9,8 +8,8 @@
     background-color: #f2f7fb;
     display: grid;
     grid-template-columns: 0.4% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 0%;
-    grid-template-rows: 72px 72px 50px 287px 287px;
-    grid-gap: 0px 2.555%;
+    grid-template-rows: 72px 72px 287px 219px 219px 10px;
+    grid-gap: 25px 2.555%;
 }
 
 .dashboard {

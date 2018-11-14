@@ -35,14 +35,14 @@ class Chart extends Component {
     this.data = (canvas) => {
       const ctx = canvas.getContext("2d");
       const gradient = ctx.createLinearGradient(10, 10, 10, 190);
-      gradient.addColorStop(0, 'rgba(30, 50, 146, 0.3)');
+      gradient.addColorStop(0, 'rgba(76, 132, 255, 0.3)');
       gradient.addColorStop(1, 'rgba(255, 255, 255, 0.3)');
       return {
         labels: this.state.pureData,
         datasets: [
           {
             label: "Temperatur",
-            borderColor: "#1E3292",
+            borderColor: "#4C84FF",
             backgroundColor: gradient,
             borderWidth: 2,
             pointRadius: 0,
