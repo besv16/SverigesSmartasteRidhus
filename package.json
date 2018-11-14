@@ -8,6 +8,7 @@
     "react": "^16.6.1",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.1",
+    "react-flatpickr": "^3.6.4",
     "react-scripts": "2.0.5"
   },
   "scripts": {

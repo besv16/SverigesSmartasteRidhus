@@ -1,46 +1,48 @@
 .first {
-  display: flex;
-  align-items: center;
-  grid-column-start: 2;
-  grid-column-end: 14;
-  grid-row-start: 2;
-  grid-row-end: 3;
+    display: flex;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 14;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 .chooseToday {
-  width: 53px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .choosePeriod {
-  width: 104px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .second {
-  width: 181px;
-  height: 35px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    width: 181px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .second p {
-  font-size: 12px;
-  font-weight: bold;
-  color: #153C6C;
-  line-height: 15px;
-  margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #153C6C;
+    line-height: 15px;
+    margin: 0;
 }
 
 .radio {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border-radius: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 5px;
 }
+
+.flatpickr {}

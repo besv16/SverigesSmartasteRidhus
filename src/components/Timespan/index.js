@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import Chart from '../Chart'
 import './index.css'
+import Flatpickr from 'react-flatpickr'
+import 'flatpickr/dist/themes/material_green.css'
+
 
 class Timespan extends Component {
 
-  componentWillMount() {
-
+  state = {
+    date: new Date()
   }
 
   render() {
+    const { date } = this.state;
 
     return (
       <div className="first">
@@ -20,6 +24,7 @@ class Timespan extends Component {
             <div className="radio"></div><span><p>Välj period</p></span>
           </div>
         </div>
+        <Flatpickr data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
       </div>
     )
   }
