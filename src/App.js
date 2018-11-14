@@ -21,15 +21,15 @@ class App extends Component {
             <div className="app">
                 <div className="menu">
                     <div className="menuItems">
-                        <div className={"menuItem " + (this.state.renderContent === 'Dashboard' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Dashboard')}>
+                        <div className={"menuItem " + (this.state.renderContent === 'Dashboard' ? 'active' : '')} onClick={(e) => this.renderContent('Dashboard')}>
                             <div className="iconContainer">
-                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Dashboard' ? '/icons/dashboard_active.svg' : './icons/dashboard_inactive.svg')}></img>
+                                <img alt={this.state.renderContent} src="/icons/dashboard.svg"></img>
                             </div>
                             <p>Dashboard</p>
                         </div>
-                        <div className={"menuItem " + (this.state.renderContent === 'Api' ? 'active' : 'inactive')} onClick={(e) => this.renderContent('Api')}>
+                        <div className={"menuItem " + (this.state.renderContent === 'Api' ? 'active' : '')} onClick={(e) => this.renderContent('Api')}>
                             <div className="iconContainer">
-                                <img alt={this.state.renderContent} src={(this.state.renderContent === 'Api' ? '/icons/api_active.svg' : './icons/api_inactive.svg')}></img>
+                                <img alt={this.state.renderContent} src="/icons/api.svg"></img>
                             </div>
                             <p>API</p>
                         </div>
