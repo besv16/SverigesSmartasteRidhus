@@ -22,27 +22,6 @@ class Chart extends Component {
           if (JSONParse.value !== undefined) {
             console.log(JSONParse.value)
 
-            const loopTroughNumbers = Object.values(JSONParse);
-
-            let testing = [loopTroughNumbers[3]];
-            let newValue = this.state.temperatureData;
-
-
-            newValue = newValue.concat([testing])
-
-            let secondToLast = newValue[newValue.length - 2];
-            let last = newValue[newValue.length - 1];
-
-            if (secondToLast && last) {
-              if (secondToLast[0] === last[0]) {
-                //det senaste värdet ska appliceras på näst sista värdet
-                //console.log(secondToLast + " är samma som " + last)
-              }
-
-              // secondToLast[0] = last[0]
-
-            }
-
             this.setState({
               currentSocketValue: [JSONParse.value]
             })
