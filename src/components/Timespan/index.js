@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './index.css'
 import Flatpickr from 'react-flatpickr'
 import 'flatpickr/dist/themes/material_green.css'
+import './index.css'
 
 
 class Timespan extends Component {
