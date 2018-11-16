@@ -5,36 +5,52 @@ class Chart extends Component {
 
   state = {
     pureData: [],
+    //använd denna att pusha in värden ifrån http
     temperatureData: [],
+    //använd denna att pusha in värdet ifrån ws
+    currentSocketValue: null
   }
 
   componentDidMount = () => {
     if (this.props.endPoint) {
-      var sock = new WebSocket("ws://159.65.94.112/ws/" + this.props.endPoint);
+      let sock = new WebSocket("ws://159.65.94.112/ws/" + this.props.endPoint);
+
       sock.onmessage = (event) => {
-          var JSONParse = JSON.parse(event.data);
+
+          let JSONParse = JSON.parse(event.data);
 
           if (JSONParse.value !== undefined) {
+            console.log(JSONParse.value)
 
             const loopTroughNumbers = Object.values(JSONParse);
 
-            var testing = [loopTroughNumbers[3]];
-            var newValue = this.state.temperatureData;
+            let testing = [loopTroughNumbers[3]];
+            let newValue = this.state.temperatureData;
+
+
             newValue = newValue.concat([testing])
 
-            console.log(newValue)
+            let secondToLast = newValue[newValue.length - 2];
+            let last = newValue[newValue.length - 1];
 
-            if (newValue == newValue) {
-              console.log("newValue == newValue")
+            if (secondToLast && last) {
+              if (secondToLast[0] === last[0]) {
+                //det senaste värdet ska appliceras på näst sista värdet
+                //console.log(secondToLast + " är samma som " + last)
+              }
+
+              // secondToLast[0] = last[0]
+
             }
 
             this.setState({
-              temperatureData: newValue
+              currentSocketValue: [JSONParse.value]
             })
 
           }
       }
     }
+  }
 
     // if (this.props.endPoint) {
     //   const apiUrl = 'http://159.65.94.112/api/v1/batch/' + this.props.endPoint;
@@ -50,9 +66,6 @@ class Chart extends Component {
     //     })
     //   });
     // }
-}
-
-  // kolla om statet är satt
 
   render() {
 
@@ -68,10 +81,10 @@ class Chart extends Component {
         gradient.addColorStop(0, 'rgba(76, 132, 255, 0.97)');
         gradient.addColorStop(1, 'rgba(255, 255, 255, 0.23)');
         return {
-          labels: this.state.temperatureData,
+          labels: this.state.currentSocketValue,
           datasets: [
             {
-              label: "Temperatur",
+              label: "Luftfuktighet",
               borderColor: "#4C84FF",
               backgroundColor: gradient,
               borderWidth: 2,
@@ -80,7 +93,7 @@ class Chart extends Component {
               pointBorderColor: "rgba(22,60,109,0.2)",
               pointBorderWidth: 11.5,
               pointBackgroundColor: "#1E3292",
-              data: this.state.temperatureData,
+              data: this.state.currentSocketValue,
             }
           ]
         }
