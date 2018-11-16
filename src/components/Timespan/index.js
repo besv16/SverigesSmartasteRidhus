@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Chart from '../Chart'
 import './index.css'
 import Flatpickr from 'react-flatpickr'
 import 'flatpickr/dist/themes/material_green.css'
