@@ -93,7 +93,6 @@ class Chart extends Component {
           labels: this.state.pureData,
           datasets: [
             {
-              label: "Luftfuktighet",
               borderColor: "#4C84FF",
               backgroundColor: gradient,
               borderWidth: 2,
@@ -113,9 +112,26 @@ class Chart extends Component {
         {this.props.endPoint &&
           <Line
           data={this.data}
-          labels={this.labels}
           width={200}
           height={100}
+          options={{
+            legend: {
+              display: false
+            },
+            scales: {
+              xAxes: [{
+                ticks: {
+                  display: false
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  max: 49,
+                  min: 48,
+                }
+              }],
+            },
+          }}
           />
         }
         </div>
