@@ -13,22 +13,52 @@ class Chart extends Component {
 
   componentDidMount = () => {
     if (this.props.endPoint) {
+
       let sock = new WebSocket("ws://159.65.94.112/ws/" + this.props.endPoint);
 
       sock.onmessage = (event) => {
 
-          let JSONParse = JSON.parse(event.data);
+        let JSONParse = JSON.parse(event.data);
 
-          if (JSONParse.value !== undefined) {
-            console.log(JSONParse.value)
+        // if (JSONParse.value == this.state.currentSocketValue) {
+        //   console.log("Ingen förändring, " + JSONParse.value + " - " + this.state.currentSocketValue)
+        // }
+        //
+        // if (JSONParse.value != this.state.currentSocketValue) {
+        //   console.log("FÖRÄNDRING!!!, " + JSONParse.value + " - " + this.state.currentSocketValue)
+        // }
+
+        if (JSONParse.value !== undefined) {
+          this.setState({
+            currentSocketValue: [JSONParse.value]
+          })
+        }
+
+
+        const apiUrl = 'http://159.65.94.112/api/v1/batch/' + this.props.endPoint;
+        fetch(apiUrl)
+        .then(results => {
+          return results.json();
+        }).then((responseData) => {
+          const dataValues = responseData.map((temp) => {
+            return temp.value;
+          })
+
+          if (this.state.currentSocketValue !== null) {
+            console.log("socket: " + this.state.currentSocketValue)
+            let testingTesting = dataValues.slice(-4).concat(this.state.currentSocketValue)
 
             this.setState({
-              currentSocketValue: [JSONParse.value]
+              pureData: testingTesting
             })
-
           }
-      }
+        });
+
     }
+
+
+    }
+
   }
 
     // if (this.props.endPoint) {
@@ -60,7 +90,7 @@ class Chart extends Component {
         gradient.addColorStop(0, 'rgba(76, 132, 255, 0.97)');
         gradient.addColorStop(1, 'rgba(255, 255, 255, 0.23)');
         return {
-          labels: this.state.currentSocketValue,
+          labels: this.state.pureData,
           datasets: [
             {
               label: "Luftfuktighet",
@@ -72,7 +102,7 @@ class Chart extends Component {
               pointBorderColor: "rgba(22,60,109,0.2)",
               pointBorderWidth: 11.5,
               pointBackgroundColor: "#1E3292",
-              data: this.state.currentSocketValue,
+              data: this.state.pureData,
             }
           ]
         }
