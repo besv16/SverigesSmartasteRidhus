@@ -6,8 +6,7 @@ import './App.css'
 class App extends Component {
 
     state = {
-        renderContent: 'Dashboard',
-        isLoading: ''
+        renderContent: 'Dashboard'
     }
 
     renderContent(e) {
