@@ -10,7 +10,9 @@
 }
 
 .timeline {
-    width: 780px;
+    margin-left: 24px;
+    grid-column-start: 2;
+    grid-column-end: 14;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -18,19 +20,43 @@
 }
 
 .option {
+    box-sizing: border-box;
     width: 50%;
     height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+    color: #4C84FF;
+    /* border: 1px solid #4C84FF; */
 }
 
-.option:nth-child(1) {
-    color: #ffffff;
+.chooseTime .option:nth-child(1) {
+    box-sizing: border-box;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.chooseTime .option:nth-child(2) {
+    box-sizing: border-box;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.option.active {
+    box-sizing: border-box;
+    color: #fff;
     background-color: #4C84FF;
+    /* border: 1px solid #fff; */
+}
+
+.option.inactive {
+    box-sizing: border-box;
+    color: #4C84FF;
+    background-color: #fff;
+    /* border: 1px solid #4C84FF; */
 }
 
 .chooseTime {
+    margin-right: 24px;
     width: 190px;
     height: 35px;
     display: flex;
@@ -61,10 +87,42 @@
     text-align: center;
 }
 
+.updateContainer {
+    margin: 0 24px 0 24px;
+}
+
+.update {
+    width: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #E3E8EF;
+    background: #fff;
+    color: #E3E8EF;
+    border-radius: 4px;
+    height: 35px;
+}
+
+.update:active {
+    color: #163C6D;
+    background: #86D6B2;
+    border: none;
+}
+
 .flatpickr {
     width: 214px;
     box-sizing: border-box;
     font-size: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background-color: #F3F9FF;
+    box-shadow: 0 2px 3px 0 rgba(13, 37, 77, 0.03);
+    color: #163C6D;
+    font-family: Lato;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 /* color change of calendar */
@@ -100,8 +158,13 @@ span.flatpickr-weekday {
     fill: #0D254D;
 }
 
-.flatpickr-day.selected,
-.flatpickr-day.selected:hover {
+.flatpickr-day.selected {
+    background: #86D6B2;
+    color: #163C6D;
+}
+
+.flatpickr-day.selected:hover,
+.flatpickr-day.selected:focus {
     background: #86D6B2;
     border: unset;
     color: #163C6D;
@@ -164,4 +227,19 @@ span.arrowDown {
 .flatpickr-time *:hover,
 .numinput:hover {
     background: unset;
+}
+
+.arrow {
+    display: flex;
+    margin-left: 6px;
+    margin-right: 6px;
+    align-self: center;
+    width: 24px;
+    height: 24px;
+}
+
+.flatpickr:focus {
+    border: 1px solid #4C84FF;
+    background-color: #F3F9FF;
+    box-shadow: 0 2px 3px 0 rgba(13, 37, 77, 0.03);
 }
