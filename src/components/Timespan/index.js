@@ -8,6 +8,7 @@ class Timespan extends Component {
 
   state = {
     date: new Date(),
+    date2: new Date(),
     sliderState: 'today'
   }
 
@@ -18,7 +19,9 @@ class Timespan extends Component {
   }
 
   render() {
+
     const { date } = this.state;
+    const { date2 } = this.state;
 
     return (
       <div className="timelineContainer">
@@ -34,7 +37,7 @@ class Timespan extends Component {
           <div className="calendarContainer">
             <Flatpickr className="flatpickr" data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
             <img className="arrow" src="/icons/arrow_forward_timeline.svg" alt="pil mellan tid-datumval" />
-            <Flatpickr className="flatpickr" data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
+            <Flatpickr className="flatpickr" data-enable-time value={date2} onChange={date2 => { this.setState({ date2 }) }} />
           </div>
           <div className="updateContainer">
             <div className="update">
