@@ -243,3 +243,9 @@ span.arrowDown {
     background-color: #F3F9FF;
     box-shadow: 0 2px 3px 0 rgba(13, 37, 77, 0.03);
 }
+
+.flatpickr-calendar.arrowTop,
+.flatpickr-calendar.arrowTop:before,
+.flatpickr-calendar.arrowTop:after {
+    border-bottom-color: #fff;
+}
