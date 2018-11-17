@@ -97,18 +97,27 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    border: 1px solid #E3E8EF;
-    background: #fff;
-    color: #E3E8EF;
     border-radius: 4px;
     height: 35px;
 }
 
-.update:active {
+.update.hide {
+    border: 1px solid #E3E8EF;
+    color: #E3E8EF;
+    background: #fff;
+}
+
+.update.show {
     color: #163C6D;
     background: #86D6B2;
     border: none;
 }
+
+/* .update:active {
+    color: #163C6D;
+    background: #86D6B2;
+    border: none;
+} */
 
 .flatpickr {
     width: 214px;
@@ -154,7 +163,6 @@ span.flatpickr-weekday {
 
 .flatpickr-months .flatpickr-prev-month:hover svg,
 .flatpickr-months .flatpickr-next-month:hover svg {
-    /* background: #fff; */
     fill: #0D254D;
 }
 

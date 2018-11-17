@@ -9,12 +9,21 @@ class Timespan extends Component {
   state = {
     date: new Date(),
     date2: new Date(),
-    sliderState: 'today'
+    sliderState: 'today',
+    updateButtonState: ''
   }
 
   dateFunction(e) {
     this.setState({
       sliderState: e
+    })
+  }
+
+
+
+  updateFunction(e) {
+    this.setState({
+      updateButtonState: e
     })
   }
 
@@ -40,7 +49,7 @@ class Timespan extends Component {
             <Flatpickr className="flatpickr" data-enable-time value={date2} onChange={date2 => { this.setState({ date2 }) }} />
           </div>
           <div className="updateContainer">
-            <div className="update">
+            <div className={"update " + (this.state.updateButtonState === 'update' ? 'show' : 'hide')} onClick={(e) => this.updateFunction('update')}>
               <p>Uppdatera</p>
             </div>
           </div>
