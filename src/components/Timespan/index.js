@@ -19,7 +19,15 @@ class Timespan extends Component {
     })
   }
 
-
+  //loggar det state som uppdaterades
+  componentDidUpdate = () => {
+    if (this.state.sliderState === 'today') {
+      console.log("today");
+    }
+    else {
+      console.log("period");
+    }
+  }
 
   updateFunction(e) {
     this.setState({
