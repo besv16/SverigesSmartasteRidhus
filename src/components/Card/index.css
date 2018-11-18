@@ -50,3 +50,12 @@
     justify-content: center;
     align-items: center;
 }
+
+.fullScreen {
+  grid-column-start: 2;
+  grid-column-end: 14;
+  grid-row-start: 2;
+  grid-row-end: 7;
+  background-color: pink;
+  z-index: 1;
+}
