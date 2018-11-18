@@ -1,0 +1,38 @@
+.headerBackground {
+    width: 103.06%;
+    grid-column-start: 1;
+    grid-column-end: 14;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #fff;
+}
+
+.headerContainer {
+    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 14;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 72px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.heading {
+    height: 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.headerLogo {
+    max-height: 29px;
+    max-width: 159px;
+    margin-left: 24px;
+}
