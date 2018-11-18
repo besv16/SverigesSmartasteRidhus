@@ -1,9 +1,13 @@
 .chart {
   display: flex;
   justify-content: center;
+  height: 186px;
+  align-items: center;
 }
 
 .chart canvas {
-  height: 160px !important;
-  width: 399px !important;
+  display: block;
+  height: 170px !important;
+  width: 93% !important;
+  border-right: 1px solid #F6F6F6;
 }

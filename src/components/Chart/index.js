@@ -35,60 +35,32 @@ class Chart extends Component {
           })
         }
 
-
         const apiUrl = 'http://159.65.94.112/api/v1/batch/' + this.props.endPoint;
         fetch(apiUrl)
         .then(results => {
           return results.json();
         }).then((responseData) => {
-          const dataValues = responseData.map((temp) => {
-            return temp.value;
+          const dataValues = responseData.map((endPoint) => {
+            return endPoint.value;
           })
 
           if (this.state.currentSocketValue !== null) {
             console.log("socket: " + this.state.currentSocketValue)
             let testingTesting = dataValues.slice(-4).concat(this.state.currentSocketValue)
-
             this.setState({
               pureData: testingTesting
             })
           }
         });
-
+      }
     }
-
-
-    }
-
   }
 
-    // if (this.props.endPoint) {
-    //   const apiUrl = 'http://159.65.94.112/api/v1/batch/' + this.props.endPoint;
-    //   fetch(apiUrl)
-    //   .then(results => {
-    //     return results.json();
-    //   }).then((responseData) => {
-    //     const dataValues = responseData.map((temp) => {
-    //       return temp.value;
-    //     })
-    //     this.setState({
-    //       pureData: dataValues.slice(0, 5)
-    //     })
-    //   });
-    // }
-
   render() {
-
-    //Vincents tips
-    // if (this.state.temperatureData.length <= 0) {
-    //   return "";
-    // }
-
-      // this.data ÄR SAMMA SOM chartData = {......}
       this.data = (canvas) => {
         const ctx = canvas.getContext("2d");
         const gradient = ctx.createLinearGradient(10, 10, 10, 190);
-        gradient.addColorStop(0, 'rgba(76, 132, 255, 0.97)');
+        gradient.addColorStop(0, 'rgba(167,202,245, 0.97)');
         gradient.addColorStop(1, 'rgba(255, 255, 255, 0.23)');
         return {
           labels: this.state.pureData,
@@ -130,7 +102,6 @@ class Chart extends Component {
                 }
               }],
               yAxes: [{
-                color: 'red',
                 gridLines: {
                   color: '#F6F6F6'
                 },
