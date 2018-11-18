@@ -1,0 +1,9 @@
+.chart {
+  display: flex;
+  justify-content: center;
+}
+
+.chart canvas {
+  height: 160px !important;
+  width: 399px !important;
+}

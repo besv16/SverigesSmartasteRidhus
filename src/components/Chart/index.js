@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Line} from 'react-chartjs-2'
+import './index.css'
 
 class Chart extends Component {
 
@@ -112,22 +113,30 @@ class Chart extends Component {
         {this.props.endPoint &&
           <Line
           data={this.data}
-          width={200}
-          height={100}
+          width={80}
+          height={33}
           options={{
+            defaultFontSize: 30,
             legend: {
               display: false
             },
             scales: {
               xAxes: [{
+                gridLines: {
+                  color: '#F6F6F6'
+                },
                 ticks: {
                   display: false
                 }
               }],
               yAxes: [{
+                color: 'red',
+                gridLines: {
+                  color: '#F6F6F6'
+                },
                 ticks: {
                   max: 49,
-                  min: 48,
+                  min: 48
                 }
               }],
             },
