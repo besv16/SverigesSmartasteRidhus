@@ -27,7 +27,7 @@
 }
 
 .headline {
-    width: 100%;
+    width: 100% !important;
     height: 49px;
     display: flex;
     flex-direction: row;
@@ -51,11 +51,44 @@
     align-items: center;
 }
 
+.open img, .close img {
+  cursor: pointer;
+}
+
 .fullScreen {
+  display: flex;
   grid-column-start: 2;
   grid-column-end: 14;
   grid-row-start: 2;
   grid-row-end: 7;
   background-color: pink;
   z-index: 1;
+}
+
+.fullScreen .chart {
+  width: 97.5%;
+	height: 623px;
+  align-items: center;
+}
+
+.fullScreen .chart canvas {
+	height: 474px !important;
+}
+
+.graphSection {
+  width: 77%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.optionsSection {
+  width: 27%;
+  background-color: #F3F7FD;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
 }
