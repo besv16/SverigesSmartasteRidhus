@@ -52,9 +52,17 @@ class Timespan extends Component {
             </div>
           </div>
           <div className="calendarContainer">
-            <Flatpickr className="flatpickr" data-enable-time value={date} onChange={date => { this.setState({ date }) }} />
+            <Flatpickr className={"flatpickr " + (this.state.sliderState === 'period' ? 'calendarOn' : 'calendarOff')}
+              data-enable-time value={date}
+              options={{ dateFormat: "d M Y   H:i" }}
+              onChange={date => { this.setState({ date }) }}
+            />
             <img className="arrow" src="/icons/arrow_forward_timeline.svg" alt="pil mellan tid-datumval" />
-            <Flatpickr className="flatpickr" data-enable-time value={date2} onChange={date2 => { this.setState({ date2 }) }} />
+            <Flatpickr className={"flatpickr " + (this.state.sliderState === 'period' ? 'calendarOn' : 'calendarOff')}
+              data-enable-time value={date2}
+              options={{ dateFormat: "d M Y    H:i" }}
+              onChange={date2 => { this.setState({ date2 }) }}
+            />
           </div>
           <div className="updateContainer">
             <div className={"update " + (this.state.updateButtonState === 'update' ? 'show' : 'hide')} onClick={(e) => this.updateFunction('update')}>

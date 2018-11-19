@@ -124,7 +124,7 @@
     box-sizing: border-box;
     font-size: 10px;
     font-weight: bold;
-    border: none;
+    border: 1px solid #F3F9FF;
     border-radius: 4px;
     background-color: #F3F9FF;
     box-shadow: 0 2px 3px 0 rgba(13, 37, 77, 0.03);
@@ -132,6 +132,20 @@
     font-family: Lato;
     letter-spacing: 1px;
     font-weight: 600;
+}
+
+input.flatpickr.calendarOn {
+    border: 1px solid #F3F9FF;
+    background-color: #F3F9FF;
+    box-shadow: 0 2px 14px 0 rgba(10, 56, 108, 0.05);
+    box-shadow: 0 2px 3px 0 rgba(13, 37, 77, 0.03);
+}
+
+input.flatpickr.calendarOff {
+    border: 1px solid #E3E8EF;
+    box-shadow: 0 2px 3px 0 rgba(13, 37, 77, 0.03);
+    background-color: #ffff;
+    color: #E3E8EF;
 }
 
 /* color change of calendar */
@@ -244,6 +258,7 @@ span.arrowDown {
     align-self: center;
     width: 24px;
     height: 24px;
+    opacity: 0.25;
 }
 
 .flatpickr:focus {
