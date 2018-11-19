@@ -57,7 +57,8 @@ class Timespan extends Component {
               options={{ dateFormat: "d M Y   H:i" }}
               onChange={date => { this.setState({ date }) }}
             />
-            <img className="arrow" src="/icons/arrow_forward_timeline.svg" alt="pil mellan tid-datumval" />
+            <img className={"arrow " + (this.state.sliderState === 'period' ? 'show' : '')} src="/icons/arrow_forward_timeline.svg" alt="pil mellan tid-datumval" />
+
             <Flatpickr className={"flatpickr " + (this.state.sliderState === 'period' ? 'calendarOn' : 'calendarOff')}
               data-enable-time value={date2}
               options={{ dateFormat: "d M Y    H:i" }}

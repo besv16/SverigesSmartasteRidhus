@@ -261,6 +261,11 @@ span.arrowDown {
     opacity: 0.25;
 }
 
+.arrow.show {
+    opacity: 1;
+    fill: red;
+}
+
 .flatpickr:focus {
     border: 1px solid #4C84FF;
     background-color: #F3F9FF;
