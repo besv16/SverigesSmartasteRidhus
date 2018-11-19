@@ -46,7 +46,7 @@ class Chart extends Component {
 
             if (this.state.currentSocketValue !== null) {
               console.log("socket: " + this.state.currentSocketValue)
-              let testingTesting = dataValues.slice(-4).concat(this.state.currentSocketValue)
+              let testingTesting = dataValues.slice(this.props.amountOfData).concat(this.state.currentSocketValue)
               this.setState({
                 pureData: testingTesting
               })
@@ -59,7 +59,7 @@ class Chart extends Component {
   render() {
     this.data = (canvas) => {
       const ctx = canvas.getContext("2d");
-      const gradient = ctx.createLinearGradient(10, 10, 10, 190);
+      const gradient = ctx.createLinearGradient(10, 10, 10, this.props.yAxisEndPoint);
       gradient.addColorStop(0, 'rgba(167,202,245, 0.97)');
       gradient.addColorStop(1, 'rgba(255, 255, 255, 0.23)');
       return {
@@ -85,8 +85,8 @@ class Chart extends Component {
         {this.props.endPoint &&
           <Line
             data={this.data}
-            width={80}
-            height={33}
+            width={this.props.width}
+            height={this.props.height}
             options={{
               defaultFontSize: 30,
               legend: {

@@ -11,7 +11,7 @@ class Dashboard extends Component {
         <Header />
         <Timespan />
         <Card type="smallCard" title="Temperatur" colStart="2" colEnd="6" endPoint="humidity" />
-        <Card type="smallCard" title="Luftfuktighet" colStart="6" colEnd="10" />
+        <Card type="smallCard" title="Luftfuktighet" colStart="6" colEnd="10" endPoint="humidity" />
         <Card type="smallCard" title="Damm" colStart="10" colEnd="14" />
         <Card type="bigCard" title="Positionering på ridbanan" colStart="2" colEnd="10" />
         <Card type="smallCardUp" title="Antal ryttare på ridbanan" colStart="10" colEnd="14" />
