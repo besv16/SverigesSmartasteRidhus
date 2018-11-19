@@ -27,12 +27,30 @@
 .heading {
     height: 33px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .headerLogo {
     max-height: 29px;
     max-width: 159px;
     margin-left: 24px;
+}
+
+.chooseCathegory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 210px;
+    border-radius: 4px;
+    background-color: #F3F9FF;
+    box-shadow: 0 2px 3px 0 rgba(13, 37, 77, 0.03);
+    color: #0D254D;
+}
+
+.chooseCathegory p {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }

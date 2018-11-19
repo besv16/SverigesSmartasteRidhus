@@ -9,6 +9,9 @@ class Header extends Component {
                 <div className="header">
                     <div className="heading">
                         <img className="headerLogo" src="/icons/innovare_logo.png" alt="Innovare logotyp" />
+                        <div className="chooseCathegory">
+                            <p>Välj kategori</p>
+                        </div>
                     </div>
                 </div>
             </div>
