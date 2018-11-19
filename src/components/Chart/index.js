@@ -71,9 +71,9 @@ class Chart extends Component {
             borderWidth: 2,
             pointRadius: 0,
             pointHoverRadius: 4.9,
-            pointBorderColor: "rgba(22,60,109,0.2)",
-            pointBorderWidth: 11.5,
-            pointBackgroundColor: "#1E3292",
+            pointBorderColor: "#4C84FF",
+            pointBorderWidth: 2,
+            pointBackgroundColor: "#ffffff",
             data: this.state.pureData,
           }
         ]

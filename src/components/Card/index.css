@@ -51,6 +51,10 @@
     align-items: center;
 }
 
+.open img, .close img {
+  cursor: pointer;
+}
+
 .fullScreen {
   display: flex;
   grid-column-start: 2;
