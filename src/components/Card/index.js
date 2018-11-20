@@ -35,19 +35,19 @@ class Card extends Component {
 
     if (this.state.fullScreenBool === true) {
       return (
-        <div className="fullScreen">
-          <div className="graphSection">
-            <div className="headline">
-              <p>{this.props.title}</p>
+          <div className="fullScreen">
+            <div className="graphSection">
+              <div className="headline">
+                <p>{this.props.title}</p>
+              </div>
+              <Chart width={100} height={57} amountOfData={-6} yAxisEndPoint={600} endPoint={this.props.endPoint} />
             </div>
-            <Chart width={100} height={57} amountOfData={-6} yAxisEndPoint={600} endPoint={this.props.endPoint} />
-          </div>
-          <div className="optionsSection">
-            <div className="close">
-              <img src="/icons/close.svg" alt="ikon för att stänga fullskärm" onClick={(e) => this.fullScreen(false)} />
+            <div className="optionsSection">
+              <div className="close">
+                <img src="/icons/close.svg" alt="ikon för att stänga fullskärm" onClick={(e) => this.fullScreen(false)} />
+              </div>
             </div>
           </div>
-        </div>
       )
     }
 

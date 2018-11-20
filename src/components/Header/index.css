@@ -30,12 +30,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .headerLogo {
     max-height: 29px;
     max-width: 159px;
-    margin-left: 36px;
+    margin-left: 40px;
 }
 
 .chooseCathegory {
