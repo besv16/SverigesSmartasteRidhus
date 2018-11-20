@@ -22,6 +22,7 @@
     height: 72px;
     width: 100%;
     background-color: #fff;
+    box-shadow: 0 2px 14px 0 rgba(10, 56, 108, 0.05);
 }
 
 .heading {
@@ -48,6 +49,7 @@
     background-color: #F3F9FF;
     box-shadow: 0 2px 3px 0 rgba(13, 37, 77, 0.03);
     color: #0D254D;
+    cursor: pointer;
 }
 
 .chooseCathegory p {
