@@ -7,7 +7,6 @@ class Api extends Component {
     return (
       <div className="dashboardContainer">
         <Header />
-        <div className="dashboardHeading"><h5>Om vårt API</h5></div>
       </div>
     )
   }
