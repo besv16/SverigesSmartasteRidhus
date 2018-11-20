@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/besv16/SverigesSmartasteRidhus/static/js/runtime~main.2aa8a44e.js"
   },
   {
-    "revision": "8a256e6eb5f72e92d1cb",
-    "url": "/besv16/SverigesSmartasteRidhus/static/js/main.8a256e6e.chunk.js"
+    "revision": "d6fae7453a8d420b3749",
+    "url": "/besv16/SverigesSmartasteRidhus/static/js/main.d6fae745.chunk.js"
   },
   {
     "revision": "582afbec836b9026d556",
     "url": "/besv16/SverigesSmartasteRidhus/static/js/1.582afbec.chunk.js"
   },
   {
-    "revision": "8a256e6eb5f72e92d1cb",
-    "url": "/besv16/SverigesSmartasteRidhus/static/css/main.396a8b58.chunk.css"
+    "revision": "d6fae7453a8d420b3749",
+    "url": "/besv16/SverigesSmartasteRidhus/static/css/main.b53f1e8b.chunk.css"
   },
   {
     "revision": "582afbec836b9026d556",
     "url": "/besv16/SverigesSmartasteRidhus/static/css/1.8f35729c.chunk.css"
   },
   {
-    "revision": "6bf973a9879561ebcfe226b4b4dd0f94",
+    "revision": "54d4ff71bd843d14996726ae0805d2f3",
     "url": "/besv16/SverigesSmartasteRidhus/index.html"
   }
 ];

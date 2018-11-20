@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/besv16/SverigesSmartasteRidhus/precache-manifest.1c61e623844cdc42c0e3e526e3ed79ac.js"
+  "/besv16/SverigesSmartasteRidhus/precache-manifest.697ad80a8449eeec6c352f90dcf3441b.js"
 );
 
 workbox.clientsClaim();
