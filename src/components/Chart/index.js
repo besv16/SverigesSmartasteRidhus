@@ -6,35 +6,22 @@ class Chart extends Component {
 
   state = {
     pureData: [],
-    //använd denna att pusha in värden ifrån http
-    temperatureData: [],
-    //använd denna att pusha in värdet ifrån ws
     currentSocketValue: null
   }
 
   componentDidMount = () => {
+    // If we have recieved an endPoint prop to Card -> connect to the ws and http and fetch the data we want to work with
     if (this.props.endPoint) {
-
+      // WebSocket connection
       let sock = new WebSocket("ws://159.65.94.112/ws/" + this.props.endPoint);
-
       sock.onmessage = (event) => {
-
         let JSONParse = JSON.parse(event.data);
-
-        // if (JSONParse.value == this.state.currentSocketValue) {
-        //   console.log("Ingen förändring, " + JSONParse.value + " - " + this.state.currentSocketValue)
-        // }
-        //
-        // if (JSONParse.value != this.state.currentSocketValue) {
-        //   console.log("FÖRÄNDRING!!!, " + JSONParse.value + " - " + this.state.currentSocketValue)
-        // }
-
         if (JSONParse.value !== undefined) {
           this.setState({
             currentSocketValue: [JSONParse.value]
           })
         }
-
+        // http API connection
         const apiUrl = 'http://159.65.94.112/api/v1/batch/' + this.props.endPoint;
         fetch(apiUrl)
           .then(results => {
@@ -43,12 +30,11 @@ class Chart extends Component {
             const dataValues = responseData.map((endPoint) => {
               return endPoint.value;
             })
-
             if (this.state.currentSocketValue !== null) {
               console.log("socket: " + this.state.currentSocketValue)
-              let testingTesting = dataValues.slice(this.props.amountOfData).concat(this.state.currentSocketValue)
+              let pureDataValues = dataValues.slice(this.props.amountOfData).concat(this.state.currentSocketValue)
               this.setState({
-                pureData: testingTesting
+                pureData: pureDataValues
               })
             }
           });
@@ -57,6 +43,7 @@ class Chart extends Component {
   }
 
   render() {
+    // Data that will be put into the data property of the Chart (Line)
     this.data = (canvas) => {
       const ctx = canvas.getContext("2d");
       const gradient = ctx.createLinearGradient(10, 10, 10, this.props.yAxisEndPoint);
@@ -82,6 +69,7 @@ class Chart extends Component {
 
     return (
       <div className="chart">
+      // If we've recieved an endPoint prop -> Create the chart
         {this.props.endPoint &&
           <Line
             data={this.data}

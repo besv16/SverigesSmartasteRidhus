@@ -19,16 +19,6 @@ class Timespan extends Component {
     })
   }
 
-  //loggar det state som uppdaterades
-  componentDidUpdate = () => {
-    if (this.state.sliderState === 'today') {
-      console.log("today");
-    }
-    else {
-      console.log("period");
-    }
-  }
-
   updateFunction(e) {
     this.setState({
       updateButtonState: e
@@ -44,21 +34,26 @@ class Timespan extends Component {
       <div className="timelineContainer">
         <div className="timeline">
           <div className="chooseTime">
+            // If the sliderState is 'today' -> the div below will get the className 'active' added, otherwise 'inactive'
             <div className={"option " + (this.state.sliderState === 'today' ? 'active' : 'inactive')} onClick={(e) => this.dateFunction('today')}>
               <p>Idag</p>
             </div>
+            // If the sliderState is 'period' -> the div below will get the className 'active' added, otherwise 'inactive'
             <div className={"option " + (this.state.sliderState === 'period' ? 'active' : 'inactive')} onClick={(e) => this.dateFunction('period')}>
               <p>Välj period</p>
             </div>
           </div>
           <div className="calendarContainer">
+            // If the sliderState is 'period' -> the div below will get the className 'calendarOn' added, otherwise 'calendarOff'
             <Flatpickr className={"flatpickr " + (this.state.sliderState === 'period' ? 'calendarOn' : 'calendarOff')}
               data-enable-time value={date}
               options={{ dateFormat: "d M Y   H:i" }}
               onChange={date => { this.setState({ date }) }}
             />
+            // If the sliderState is 'period' -> the div below will get the className 'show' added, otherwise nothing ('')
             <img className={"arrow " + (this.state.sliderState === 'period' ? 'show' : '')} src="/icons/arrow_forward_timeline.svg" alt="pil mellan tid-datumval" />
 
+            // If the sliderState is 'period' -> the div below will get the className 'calendarOn' added, otherwise calendarOff
             <Flatpickr className={"flatpickr " + (this.state.sliderState === 'period' ? 'calendarOn' : 'calendarOff')}
               data-enable-time value={date2}
               options={{ dateFormat: "d M Y    H:i" }}
@@ -66,6 +61,7 @@ class Timespan extends Component {
             />
           </div>
           <div className="updateContainer">
+            // If the updateButtonState is 'update' -> the div below will get the className 'show' added, otherwise hide
             <div className={"update " + (this.state.updateButtonState === 'update' ? 'show' : 'hide')} onClick={(e) => this.updateFunction('update')}>
               <p>Uppdatera</p>
             </div>

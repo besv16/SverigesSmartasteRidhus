@@ -16,9 +16,7 @@ class Card extends Component {
 
   render() {
 
-    // HÄR KOLLAR VI OM IKONEN FÖR HELSKÄRMSVYN
-    //BLIVIT KLICKAD PÅ ELLER EJ OCH RENDERAR OLIKA
-    //VYER BEROENDE PÅ DETTA
+    // Depending on the fullScreen bool, we render different views
     if (this.state.fullScreenBool === false) {
       return (
         <div className={this.props.type} style={{ gridColumnStart: this.props.colStart, gridColumnEnd: this.props.colEnd, gridRowStart: this.props.rowStart, gridRowEnd: this.props.rowEnd }}>
