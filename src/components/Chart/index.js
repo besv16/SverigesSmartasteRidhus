@@ -43,7 +43,6 @@ class Chart extends Component {
   }
 
   render() {
-    // Data that will be put into the data property of the Chart (Line)
     this.data = (canvas) => {
       const ctx = canvas.getContext("2d");
       const gradient = ctx.createLinearGradient(10, 10, 10, this.props.yAxisEndPoint);
@@ -69,7 +68,6 @@ class Chart extends Component {
 
     return (
       <div className="chart">
-      // If we've recieved an endPoint prop -> Create the chart
         {this.props.endPoint &&
           <Line
             data={this.data}

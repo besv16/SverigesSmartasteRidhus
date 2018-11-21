@@ -15,8 +15,6 @@ class Card extends Component {
   }
 
   render() {
-
-    // Depending on the fullScreen bool, we render different views
     if (this.state.fullScreenBool === false) {
       return (
         <div className={this.props.type} style={{ gridColumnStart: this.props.colStart, gridColumnEnd: this.props.colEnd, gridRowStart: this.props.rowStart, gridRowEnd: this.props.rowEnd }}>
