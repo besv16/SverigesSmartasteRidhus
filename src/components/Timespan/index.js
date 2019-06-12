@@ -3,7 +3,6 @@ import Flatpickr from 'react-flatpickr'
 import 'flatpickr/dist/themes/material_green.css'
 import './index.css'
 
-
 class Timespan extends Component {
 
   state = {
@@ -13,7 +12,7 @@ class Timespan extends Component {
     updateButtonState: ''
   }
 
-  // Checks which button in the timespan is selecte ('Idag'/'Välj period')
+  // Checks which button in the timespan is selected ('Idag'/'Välj period')
   dateFunction(e) {
     this.setState({
       sliderState: e

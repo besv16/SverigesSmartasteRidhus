@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Dashboard from './components/Dashboard'
-import Api from './components/Api'
+import About from './components/About'
 import './App.css'
 
 class App extends Component {
@@ -26,7 +26,7 @@ class App extends Component {
                             </div>
                             <p>Dashboard</p>
                         </div>
-                        <div className={"menuItem " + (this.state.renderContent === 'Api' ? 'active' : '')} onClick={(e) => this.renderContent('Api')}>
+                        <div className={"menuItem " + (this.state.renderContent === 'About' ? 'active' : '')} onClick={(e) => this.renderContent('About')}>
                             <div className="iconContainer">
                                 <img alt={this.state.renderContent} src="/icons/api.svg"></img>
                             </div>
@@ -36,7 +36,7 @@ class App extends Component {
                 </div>
                 <div className="dashboardContainerFull">
                     {this.state.renderContent === 'Dashboard' && (<Dashboard />)}
-                    {this.state.renderContent === 'Api' && (<Api />)}
+                    {this.state.renderContent === 'About' && (<About />)}
                 </div>
             </div>
         );
